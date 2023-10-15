@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.main{
+    width: 100%;
+    min-height: 100Vh;
+    background: linear-gradient(327deg, rgb(237, 138, 120), rgb(243, 152, 223), rgb(243, 142, 109) );
+    padding: 10px
+}
+.todo{
+    width: 100%;
+    max-width: 500px;
+    background-color: rgb(244, 193, 237);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+}
+
+.todo h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 25px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: rgb(180, 116, 239);
+    color: rgb(235, 235, 231);
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+ul li{
+    position: relative;
+    list-style: none;
+    font-size: 15px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(img/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left:8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(img/checkedd.png);
+}
+
+ul li span{
+    text-align: center;
+    color: black;
+    line-height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+ul li span:hover{
+    background: rgb(156, 155, 155,0.3);
+}
